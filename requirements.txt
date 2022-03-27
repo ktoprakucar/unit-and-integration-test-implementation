@@ -1,0 +1,9 @@
+pandas==1.4.1
+psycopg2==2.9.3
+fastapi==0.70.0
+requests==2.27.1
+uvicorn==0.15.0
+testcontainers==3.4.2
+pytest==7.0.1
+Flask==2.0.3
+
