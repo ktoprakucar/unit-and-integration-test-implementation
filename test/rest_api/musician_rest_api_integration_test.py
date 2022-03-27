@@ -32,6 +32,18 @@ class MusicianRestApiIntegrationTest(unittest.TestCase, AbstractIntegrationTestC
         self.assertEqual(musician['age'], 27)
         self.assertEqual(musician['instrument'], 'guitar')
 
+    def test_should_raise_an_exception_if_musician_name_is_invalid(self):
+        # given
+        name = "kurt67"
+        url = "/api/v1/fetch-by-name"
+
+        # when
+        with self.assertRaises(Exception) as context:
+            self.client.get(f"{url}?name={name}")
+
+        # then
+        self.assertTrue('Name is invalid.' in str(context.exception))
+
     def test_should_not_fetch_musician_by_name_if_it_does_not_exist(self):
         # given
         name = "paul"

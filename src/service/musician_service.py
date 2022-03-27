@@ -3,6 +3,7 @@ from typing import List
 from src.client.external_musician_client import ExternalMusicianClient
 from src.model.musician import Musician
 from src.repository.musician_repository import MusicianRepository
+from validation.musician_validation_service import MusicianValidationService
 
 
 class MusicianService:
@@ -14,6 +15,7 @@ class MusicianService:
         self.__external_musician_client = external_musician_client
 
     def get_musician_by_name(self, name: str) -> Musician:
+        MusicianValidationService.validate_name(name)
         musician: Musician = self.__musician_repository.get_musician(name)
         return musician
 

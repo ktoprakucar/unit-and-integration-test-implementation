@@ -28,3 +28,18 @@ class MusicianServiceTest(unittest.TestCase):
         self.assertEqual(musician.surname, 'cobain')
         self.assertEqual(musician.age, 27)
         self.assertEqual(musician.instrument, 'guitar')
+
+    def test_should_raise_an_exception_when_name_is_invalid(self):
+        # given
+        musician_repository = Mock()
+        external_musicians_client = Mock()
+
+        musician_service = MusicianService(musician_repository=musician_repository,
+                                           external_musician_client=external_musicians_client)
+
+        # when
+        with self.assertRaises(Exception) as context:
+            musician_service.get_musician_by_name('kurt67')
+
+        # then
+        self.assertTrue('Name is invalid.' in str(context.exception))
