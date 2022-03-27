@@ -14,6 +14,8 @@ class MusicianRepository:
 
     def get_musician(self, name: str) -> Musician:
         musician_df: pd.DataFrame = self.__postgres_client.retrieve_musician(name)
+        if musician_df.empty:
+            return None
         return Mapper.convert_dataframe_to_musician(musician_df.iloc[0])
 
     def get_musicians_by_names(self, musician_names: List[str]) -> List[Musician]:
