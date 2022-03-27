@@ -3,7 +3,7 @@ import unittest
 
 import requests
 
-from resources.mock_server import MockServer
+from test.resources.mock_server import MockServer
 
 
 class MockServerTest(unittest.TestCase):

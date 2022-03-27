@@ -2,7 +2,7 @@ import unittest
 
 import pandas as pd
 
-from resources.abstract_integration_test_class import AbstractIntegrationTestClass
+from test.resources.abstract_integration_test_class import AbstractIntegrationTestClass
 
 
 class MusicianRestApiIntegrationTest(unittest.TestCase, AbstractIntegrationTestClass):

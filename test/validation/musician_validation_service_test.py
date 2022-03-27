@@ -1,6 +1,6 @@
 import unittest
 
-from validation.musician_validation_service import MusicianValidationService
+from src.validation.musician_validation_service import MusicianValidationService
 
 
 class MusicianValidationServiceTest(unittest.TestCase):

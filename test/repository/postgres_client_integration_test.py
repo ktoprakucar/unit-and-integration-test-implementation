@@ -2,8 +2,8 @@ import unittest
 
 import pandas as pd
 
-from client.postgres_client import PostgresClient
-from resources.abstract_integration_test_class import AbstractIntegrationTestClass
+from src.client.postgres_client import PostgresClient
+from test.resources.abstract_integration_test_class import AbstractIntegrationTestClass
 
 
 class PostgresClientIntegrationTest(unittest.TestCase, AbstractIntegrationTestClass):

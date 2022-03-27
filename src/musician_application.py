@@ -1,12 +1,12 @@
 import uvicorn
 
-from client.external_musician_client import ExternalMusicianClient
-from client.postgres_client import PostgresClient
-from config.external_musicians_client_config import ExternalMusicianClientConfig
-from config.postgres_client_config import PostgresClientConfig
-from repository.musician_repository import MusicianRepository
-from rest_api.musician_rest_api import MusicianRestApi
-from service.musician_service import MusicianService
+from src.client.external_musician_client import ExternalMusicianClient
+from src.client.postgres_client import PostgresClient
+from src.config.external_musicians_client_config import ExternalMusicianClientConfig
+from src.config.postgres_client_config import PostgresClientConfig
+from src.repository.musician_repository import MusicianRepository
+from src.rest_api.musician_rest_api import MusicianRestApi
+from src.service.musician_service import MusicianService
 
 
 def start_application() -> MusicianRestApi:

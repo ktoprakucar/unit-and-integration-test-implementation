@@ -1,8 +1,8 @@
 import unittest
 
-from client.external_musician_client import ExternalMusicianClient
-from config.external_musicians_client_config import ExternalMusicianClientConfig
-from resources.abstract_integration_test_class import AbstractIntegrationTestClass
+from src.client.external_musician_client import ExternalMusicianClient
+from src.config.external_musicians_client_config import ExternalMusicianClientConfig
+from test.resources.abstract_integration_test_class import AbstractIntegrationTestClass
 
 
 class ExternalMusicianClientIntegrationTest(unittest.TestCase, AbstractIntegrationTestClass):

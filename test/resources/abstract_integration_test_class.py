@@ -6,8 +6,8 @@ import psycopg2
 import testcontainers.compose
 from fastapi.testclient import TestClient
 
-from config.external_musicians_client_config import ExternalMusicianClientConfig
-from musician_application import start_application
+from src.config.external_musicians_client_config import ExternalMusicianClientConfig
+from src.musician_application import start_application
 from src.config.postgres_client_config import PostgresClientConfig
 from test.resources.mock_server import MockServer
 
