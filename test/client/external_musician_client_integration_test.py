@@ -9,11 +9,11 @@ class ExternalMusicianClientIntegrationTest(unittest.TestCase, AbstractIntegrati
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.set_up_class()
+        cls.setup()
 
     @classmethod
     def tearDownClass(cls) -> None:
-        cls.tear_down_class()
+        cls.tear_down()
 
     def test_should_get_all_musicians_names(self):
         # given

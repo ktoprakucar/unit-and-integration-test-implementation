@@ -10,11 +10,11 @@ class PostgresClientIntegrationTest(unittest.TestCase, AbstractIntegrationTestCl
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.set_up_class()
+        cls.setup()
 
     @classmethod
     def tearDownClass(cls) -> None:
-        cls.tear_down_class()
+        cls.tear_down()
 
     def test_should_retrieve_musician(self):
         # given

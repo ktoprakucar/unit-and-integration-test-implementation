@@ -30,7 +30,7 @@ class AbstractIntegrationTestClass(ABC):
     client_port = None
 
     @classmethod
-    def set_up_class(cls) -> None:
+    def setup(cls) -> None:
         cls.postgres_url = "localhost"
         cls.postgres_port = "5432"
         cls.postgres_database = "test-db"
@@ -61,7 +61,7 @@ class AbstractIntegrationTestClass(ABC):
         cls.client = TestClient(start_application())
 
     @classmethod
-    def tear_down_class(cls):
+    def tear_down(cls):
         cls.compose.stop()
         cls.server.shutdown_server()
 
