@@ -16,8 +16,8 @@ def start_application() -> MusicianRestApi:
     postgres_user_name = "username"
     postgres_password = "password"
 
-    space_x_url = "http://localhost"
-    space_x_port = 8081
+    external_client_url = "http://localhost"
+    external_client_port = 8081
 
     postgres_client_config = PostgresClientConfig(url=postgres_url,
                                                   port=postgres_port,
@@ -27,7 +27,7 @@ def start_application() -> MusicianRestApi:
     postgres_client = PostgresClient(postgres_client_config)
     musician_repository = MusicianRepository(postgres_client=postgres_client)
 
-    external_musician_client_config = ExternalMusicianClientConfig(url=space_x_url, port=space_x_port)
+    external_musician_client_config = ExternalMusicianClientConfig(url=external_client_url, port=external_client_port)
     external_musician_client = ExternalMusicianClient(external_musician_client_config)
 
     musician_service = MusicianService(musician_repository=musician_repository,
