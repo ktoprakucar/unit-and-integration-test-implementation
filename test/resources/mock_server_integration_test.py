@@ -6,7 +6,7 @@ import requests
 from test.resources.mock_server import MockServer
 
 
-class MockServerTest(unittest.TestCase):
+class MockServerIntegrationTest(unittest.TestCase):
 
     def setUp(self):
         self.server = MockServer(url="http://localhost", port=1234)
